@@ -24,7 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   google_maps_flutter: ^0.5.27+3 
-  firebase_database: ^3.1.6   
+  page_transition: ^1.1.5
+  # firebase_database: ^3.1.6   
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -47,9 +48,16 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/#1.jpg
+    - assets/boss.jpg
+    - images/
+
+
+  # fonts:
+  # - family:  CarSales
+  #   fonts:
+  #   - asset: assets/fonts/CarSales.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
