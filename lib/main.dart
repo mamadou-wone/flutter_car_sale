@@ -6,13 +6,14 @@ import 'carlistdata/cardatamodel.dart';
 
 void main() => runApp(MyApp());
 
+//Sattic Day
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Car Sale',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
