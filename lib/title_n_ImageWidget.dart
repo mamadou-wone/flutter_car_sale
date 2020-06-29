@@ -6,7 +6,7 @@ class TitleContainer extends StatelessWidget {
   final double _fontSize;
   final Color _colors;
 
-  TitleContainer(this._padding, this._title, this._fontSize,this._colors);
+  TitleContainer(this._padding, this._title, this._fontSize, this._colors);
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +24,15 @@ class My360Image extends StatelessWidget {
   const My360Image({
     Key key,
     @required int counter,
-  }) : _counter = counter, super(key: key);
+  })  : _counter = counter,
+        super(key: key);
 
   final int _counter;
 
   @override
   Widget build(BuildContext context) {
     return Hero(
-      tag:'image_car' ,
+      tag: 'image_car',
       child: Image.asset(
         'images/$_counter.gif',
         height: 250,
@@ -42,10 +43,9 @@ class My360Image extends StatelessWidget {
 }
 
 class SingleImage extends StatelessWidget {
-
   final String imageUrl;
   final heroTag;
-  SingleImage(this.imageUrl,this.heroTag);
+  SingleImage(this.imageUrl, this.heroTag);
 
   @override
   Widget build(BuildContext context) {
@@ -61,11 +61,9 @@ class SingleImage extends StatelessWidget {
 }
 
 class MyBookBtn extends StatelessWidget {
-
   final EdgeInsets _edgeInsets;
 
   MyBookBtn(this._edgeInsets);
-
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +108,7 @@ class MyBookBtn extends StatelessWidget {
 class PriceContainer extends StatelessWidget {
   final String price;
   final Color fontColor;
-  PriceContainer (this.price,this.fontColor);
+  PriceContainer(this.price, this.fontColor);
 
   @override
   Widget build(BuildContext context) {
@@ -120,12 +118,12 @@ class PriceContainer extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            TitleContainer(EdgeInsets.only(left: 16), "\$$price", 30.0,fontColor),
             TitleContainer(
-                EdgeInsets.only(left: 16), "Starting price", 12.0,fontColor),
+                EdgeInsets.only(left: 16), "\$$price", 30.0, fontColor),
+            TitleContainer(
+                EdgeInsets.only(left: 16), "Starting price", 12.0, fontColor),
           ],
         ),
-
       ),
     );
   }
@@ -136,10 +134,9 @@ class FeatureCard extends StatelessWidget {
   final String title;
   final bool isWhite;
   final Color fontColor;
-  FeatureCard(this.imageName, this.title,this.isWhite,this.fontColor);
+  FeatureCard(this.imageName, this.title, this.isWhite, this.fontColor);
   @override
   Widget build(BuildContext context) {
-
     return Card(
       color: Colors.transparent,
       margin: EdgeInsets.all(10.0),
@@ -148,9 +145,8 @@ class FeatureCard extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-
             Image.asset(
-              getImageName(imageName,isWhite),
+              getImageName(imageName, isWhite),
               height: 30,
               width: 30,
               fit: BoxFit.fill,
@@ -167,24 +163,22 @@ class FeatureCard extends StatelessWidget {
 }
 
 String getImageName(String imageName, bool isWhite) {
-
-  if(isWhite){
-    return "images/"+imageName+"_white.png";
-  }else{
-    return "images/"+imageName+".png";
+  if (isWhite) {
+    return "images/" + imageName + "_white.png";
+  } else {
+    return "images/" + imageName + ".png";
   }
 }
 
 class BottomSheetContainer extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 60,
       decoration: BoxDecoration(
           color: Colors.black,
-          borderRadius: BorderRadiusDirectional.vertical(top: Radius.circular(30.0))
-      ),
+          borderRadius:
+              BorderRadiusDirectional.vertical(top: Radius.circular(30.0))),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -196,8 +190,7 @@ class BottomSheetContainer extends StatelessWidget {
               height: 3,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  color: Colors.grey
-              ),
+                  color: Colors.grey),
             ),
             Text(
               'Check more information',

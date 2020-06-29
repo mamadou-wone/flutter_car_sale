@@ -100,16 +100,16 @@ class _MyCarPageState extends State<MyCarPage> {
                   children: <Widget>[
                     FeatureCard(
                       "speed",
-                      "100",
+                      "kilométrage",
                       widget.carDataModel.isWhite,
                       widget.carDataModel.fontColor,
                     ),
-                    FeatureCard("engine", "AWD", widget.carDataModel.isWhite,
-                        widget.carDataModel.fontColor),
+                    // FeatureCard("engine", "AWD", widget.carDataModel.isWhite,
+                    //     widget.carDataModel.fontColor),
                     FeatureCard("fule", "Fule", widget.carDataModel.isWhite,
                         widget.carDataModel.fontColor),
-                    FeatureCard("power", "Power", widget.carDataModel.isWhite,
-                        widget.carDataModel.fontColor),
+                    // FeatureCard("power", "Power", widget.carDataModel.isWhite,
+                    //     widget.carDataModel.fontColor),
                   ],
                 ),
                 Row(
@@ -117,16 +117,16 @@ class _MyCarPageState extends State<MyCarPage> {
                   children: <Widget>[
                     FeatureCard("airbag", "Airbag", widget.carDataModel.isWhite,
                         widget.carDataModel.fontColor),
-                    FeatureCard(
-                        "batterytype",
-                        "Battery",
-                        widget.carDataModel.isWhite,
-                        widget.carDataModel.fontColor),
-                    FeatureCard(
-                        "steeringwheel",
-                        "Steering",
-                        widget.carDataModel.isWhite,
-                        widget.carDataModel.fontColor),
+                    // FeatureCard(
+                    //     "batterytype",
+                    //     "Battery",
+                    //     widget.carDataModel.isWhite,
+                    //     widget.carDataModel.fontColor),
+                    // FeatureCard(
+                    //     "steeringwheel",
+                    //     "Steering",
+                    //     widget.carDataModel.isWhite,
+                    //     widget.carDataModel.fontColor),
                   ],
                 ),
               ],
